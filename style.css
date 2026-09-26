@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #000;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: clamp(32px, 6vw, 84px) 20px;
+  background: #000;
+}
+
+.content {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: min(64vw, 540px);
+  height: auto;
+  margin: 0 auto clamp(24px, 4vw, 42px);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 4.2rem);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.lead {
+  margin: clamp(22px, 3vw, 34px) auto 0;
+  max-width: 760px;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.message {
+  margin: 10px auto 0;
+  max-width: 760px;
+  font-size: clamp(0.98rem, 1.7vw, 1.16rem);
+  line-height: 1.6;
+  color: #e8e8e8;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  margin-top: clamp(30px, 4vw, 44px);
+}
+
+.contact-heading {
+  margin: 0 0 4px;
+  font-size: clamp(1rem, 1.9vw, 1.2rem);
+  font-weight: 700;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  overflow-wrap: anywhere;
+}
+
+.contact a:hover,
+.contact a:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
+.contact a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    place-items: start center;
+    padding: 54px 18px 44px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .logo {
+    width: min(82vw, 390px);
+    margin-bottom: 32px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    max-width: 12ch;
+    margin-inline: auto;
+  }
+
+  .lead {
+    margin-top: 25px;
+    max-width: 31ch;
+  }
+
+  .message {
+    max-width: 34ch;
+  }
+
+  .contact {
+    margin-top: 30px;
+  }
+
+  .contact-heading {
+    max-width: 30ch;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding-inline: 14px;
+  }
+
+  .logo {
+    width: 88vw;
+  }
+
+  .email {
+    font-size: 0.96rem;
+  }
+}
